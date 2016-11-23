@@ -9,5 +9,5 @@ RUN curl -s http://d3kbcqa49mib13.cloudfront.net/spark-1.6.1-bin-hadoop2.6.tgz |
     && ln -s /opt/spark-1.6.1-bin-hadoop2.6 /opt/spark
 
 # copy the scripts
-ADD spark-env /bin/spark-env
-RUN chmod a+x /bin/spark-env
+ADD spark-env.sh /etc/profile.d/spark-env.sh
+RUN chmod a+x /etc/profile.d/spark-env.sh
